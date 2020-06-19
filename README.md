@@ -1,8 +1,8 @@
-# react-bill-app
+# react-single-app
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-记账应用
+react 单页应用模板
 
 ## 目录结构
 
