@@ -1,0 +1,69 @@
+{
+  "name": "react-bill-app",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "lint": "cross-env NODE_ENV=production eslint '**/*.{tsx,ts}' --fix",
+    "prettier": "prettier --write '**/*.{js,json}'",
+    "eject": "react-scripts eject",
+    "analyze": "source-map-explorer 'dist/static/js/*.js'"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts?(x)": [
+      "cross-env NODE_ENV=production eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "papaparse": "^5.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^26.0.0",
+    "@types/lodash": "^4.14.155",
+    "@types/node": "^14.0.13",
+    "@types/papaparse": "^5.0.4",
+    "@types/react": "^16.9.38",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router-config": "^5.0.1",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/webpack-env": "^1.15.2",
+    "babel-plugin-transform-async-to-promises": "^0.8.15",
+    "better-mock": "^0.2.5",
+    "cross-env": "^7.0.2",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "html-webpack-externals-plugin": "^3.8.0",
+    "lint-staged": "^10.2.11",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "react-app-rewired": "^2.1.6",
+    "react-scripts": "3.4.1",
+    "source-map-explorer": "^2.4.2",
+    "typescript": "^3.9.5",
+    "yorkie": "^2.0.0"
+  }
+}
